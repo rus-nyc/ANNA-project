@@ -56,48 +56,48 @@ const Hero = () => {
             <p className="hero-subtitle">чит-код от прокрастинации</p>
 
             <div className="hero-full-text">
-              <p>ты можешь сделать за ночь то, что другие делают неделю</p>
+              <p>Ты можешь сделать за ночь то, что другие делают неделю</p>
               <p>
                 но <strong>НЕ МОЖЕШЬ НАЧАТЬ</strong> простое
               </p>
 
               <p>
-                ты <strong>ЗНАЕШЬ, ЧТО</strong> делать
+                Ты <strong>ЗНАЕШЬ, ЧТО</strong> делать
               </p>
               <p>
                 но <strong>НЕ МОЖЕШЬ НАЧАТЬ</strong>
               </p>
 
               <p>
-                у тебя есть <strong>ИДЕИ</strong>
+                У тебя есть <strong>ИДЕИ</strong>
               </p>
               <p>
                 но они <strong>НЕ ДОХОДЯТ ДО КОНЦА</strong>
               </p>
 
               <p>
-                ты можешь быть <strong>ОЧЕНЬ ПРОДУКТИВНЫМ</strong>
+                Ты можешь быть <strong>ОЧЕНЬ ПРОДУКТИВНЫМ</strong>
               </p>
               <p>
                 но <strong>НЕ МОЖЕШЬ ЭТИМ УПРАВЛЯТЬ</strong>
               </p>
 
               <p>
-                вчера ты <strong>МОГ</strong>
+                Вчера ты <strong>МОГ</strong>
               </p>
               <p>
                 сегодня как будто <strong>НЕТ</strong>
               </p>
 
               <p>
-                ты снова <strong>ОТКЛАДЫВАЕШЬ</strong>
+                Ты снова <strong>ОТКЛАДЫВАЕШЬ</strong>
               </p>
               <p>
                 и <strong>ЗЛИШЬСЯ НА СЕБЯ</strong>
               </p>
 
               <p>
-                ты думал, что это <strong>ЛЕНЬ</strong>
+                Ты думал, что это <strong>ЛЕНЬ</strong>
               </p>
               <p>
                 или <strong>СЛАБАЯ ВОЛЯ</strong>
@@ -107,9 +107,9 @@ const Hero = () => {
                 <strong>НО ЭТО ТО, КАК РАБОТАЕТ ТВОЯ НЕРВНАЯ СИСТЕМА</strong>
               </p>
 
-              <p>здесь не будет «просто начни»</p>
+              <p>Здесь не будет «просто начни»</p>
               <p>
-                здесь ты поймёшь <strong>ПОЧЕМУ</strong> это происходит
+                Здесь ты поймёшь <strong>ПОЧЕМУ</strong> это происходит
               </p>
               <p>
                 и как <strong>ПЕРЕСТАТЬ ВОЕВАТЬ С СОБОЙ</strong>
@@ -263,7 +263,7 @@ const InnerVoicesSection = () => (
 
       <article className="compact-item">
         <span className="section-label">Иногда ты думаешь</span>
-        <h2>«Ты ленивая, безвольная ж.па?»</h2>
+        <h2>«Я ленивая, безвольная ж.па?»</h2>
         <p className="section-text compact-text">
           Потому что иногда ты можешь многое, очень многое.
           А иногда ты знаешь, что делать, но не можешь взяться за задачу.
@@ -516,7 +516,7 @@ const CtaSection = () => {
         </p>
 
         <div className="cta-price">
-          <span className="price-old">$19</span>
+          <span className="price-old">$29</span>
           <span className="price-current">$9</span>
         </div>
 
