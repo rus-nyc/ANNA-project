@@ -559,7 +559,7 @@ const CtaSection = () => {
 
         <div className="cta-buttons">
           <a href="#" className="primary-button">
-            Получить доступ
+            💳 Оплатить и получить доступ
           </a>
         </div>
 
