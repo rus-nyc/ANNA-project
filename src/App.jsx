@@ -2,6 +2,7 @@ import mainPhoto from "./assets/images/IMG_2053.JPG";
 import introVideo from "./assets/video/anna-intro.MP4";
 import "./index.css";
 import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Header = () => {
   const scrollToSection = (id) => {
@@ -141,6 +142,7 @@ const Hero = () => {
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
 
   const handlePlayVideo = () => {
     if (videoRef.current) {
@@ -148,6 +150,42 @@ const VideoSection = () => {
       setIsPlaying(true);
     }
   };
+
+  // Эффект для отслеживания видимости видео
+  useEffect(() => {
+    const currentVideo = videoRef.current;
+    const currentContainer = containerRef.current;
+
+    if (!currentVideo) return;
+
+    // Создаём наблюдатель за видимостью
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Если видео НЕ видно на экране И оно играет
+          if (!entry.isIntersecting && isPlaying) {
+            currentVideo.pause();
+            setIsPlaying(false);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Видео считается "невидимым", если видно меньше 30%
+      }
+    );
+
+    // Начинаем следить за контейнером видео
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+
+    // Очищаем наблюдатель при размонтировании
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+    };
+  }, [isPlaying]);
 
   return (
     <section className="section video-section">
@@ -162,7 +200,7 @@ const VideoSection = () => {
           </p>
         </div>
 
-        <div className="video-wrapper">
+        <div className="video-wrapper" ref={containerRef}>
           <div className="video-container">
             {!isPlaying && (
               <div className="video-overlay" onClick={handlePlayVideo}>
