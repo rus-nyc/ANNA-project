@@ -1,7 +1,6 @@
 import mainPhoto from "./assets/images/IMG_2053.JPG";
 import introVideo from "./assets/video/anna-intro.MP4";
 import "./index.css";
-import { useState, useRef } from "react";
 import { useState, useRef, useEffect } from "react";
 
 const Header = () => {
@@ -151,18 +150,18 @@ const VideoSection = () => {
     }
   };
 
-  // Эффект для отслеживания видимости видео
+ 
   useEffect(() => {
     const currentVideo = videoRef.current;
     const currentContainer = containerRef.current;
 
     if (!currentVideo) return;
 
-    // Создаём наблюдатель за видимостью
+   
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Если видео НЕ видно на экране И оно играет
+         
           if (!entry.isIntersecting && isPlaying) {
             currentVideo.pause();
             setIsPlaying(false);
@@ -170,16 +169,16 @@ const VideoSection = () => {
         });
       },
       {
-        threshold: 0.3, // Видео считается "невидимым", если видно меньше 30%
+        threshold: 0.1, 
       }
     );
 
-    // Начинаем следить за контейнером видео
+  
     if (currentContainer) {
       observer.observe(currentContainer);
     }
 
-    // Очищаем наблюдатель при размонтировании
+  
     return () => {
       if (currentContainer) {
         observer.unobserve(currentContainer);
