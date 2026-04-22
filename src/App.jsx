@@ -29,6 +29,9 @@ const Header = () => {
           <button onClick={() => scrollToSection("faq")} className="nav-link">
             FAQ
           </button>
+          <button onClick={() => scrollToSection("experts")} className="nav-link">
+            Эксперты
+          </button>
           <button onClick={() => scrollToSection("cta")} className="header-button">
             Получить доступ
           </button>
@@ -150,18 +153,15 @@ const VideoSection = () => {
     }
   };
 
- 
   useEffect(() => {
     const currentVideo = videoRef.current;
     const currentContainer = containerRef.current;
 
     if (!currentVideo) return;
 
-   
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-         
           if (!entry.isIntersecting && isPlaying) {
             currentVideo.pause();
             setIsPlaying(false);
@@ -169,16 +169,14 @@ const VideoSection = () => {
         });
       },
       {
-        threshold: 0.1, 
+        threshold: 0.1,
       }
     );
 
-  
     if (currentContainer) {
       observer.observe(currentContainer);
     }
 
-  
     return () => {
       if (currentContainer) {
         observer.unobserve(currentContainer);
@@ -535,6 +533,88 @@ const FAQSection = () => {
   );
 };
 
+// НОВАЯ СЕКЦИЯ: ЭКСПЕРТЫ
+const ExpertsSection = () => {
+  return (
+    <section className="section experts-section" id="experts">
+      <div className="container">
+        <div className="section-header center">
+          <span className="section-label">Кто ведёт</span>
+          <h2>Ваши эксперты</h2>
+        </div>
+
+        <div className="experts-grid">
+          {/* Анна Милованова */}
+          <div className="expert-card">
+            <div className="expert-photo">
+              <img src={mainPhoto} alt="Анна Милованова" />
+            </div>
+            <h3>Анна Милованова</h3>
+            <p className="expert-title">Кризисный психолог, EMDR-терапевт</p>
+            <p className="expert-experience">20+ лет частной практики</p>
+            
+            <div className="expert-divider"></div>
+            
+            <div className="expert-approach">
+              <p><strong>Работаю в подходе ДПДГ (EMDR)</strong> — современном методе психотерапии для работы с травматическим опытом, тревогой, последствиями стресса и эмоциональными перегрузками.</p>
+              <p>Учитываю особенности <strong>СДВГ у взрослых</strong>, влияние нейроотличий на самооценку, отношения, мотивацию и повседневную жизнь.</p>
+            </div>
+
+            <div className="expert-requests">
+              <p className="requests-title">Частые запросы:</p>
+              <ul>
+                <li>тревога, панические атаки, эмоциональные перегрузки</li>
+                <li>последствия критики, стыда, хронического самообвинения</li>
+                <li>прокрастинация, выгорание, ощущение «не справляюсь»</li>
+                <li>жизненные кризисы, потери, резкие перемены</li>
+                <li>особенности жизни с СДВГ: хаос, откладывание, истощение</li>
+                <li>сложности в отношениях, когда тяжело понять себя и другого</li>
+              </ul>
+            </div>
+
+            <div className="expert-contacts">
+              <a href="https://forms.gle/SArV4HVsGhmTFc4S7" className="expert-button" target="_blank" rel="noopener noreferrer">
+                📝 Записаться на диагностику
+              </a>
+            </div>
+          </div>
+
+          {/* Стан (Alexander Stan) */}
+          <div className="expert-card">
+            <div className="expert-photo expert-photo-placeholder">
+              <div className="photo-placeholder">📷</div>
+            </div>
+            <h3>Стан (Alexander Stan)</h3>
+            <p className="expert-title">Эксперт по психологии поведения и глубинной трансформации</p>
+            
+            <div className="expert-divider"></div>
+            
+            <div className="expert-approach">
+              <p>Работаю на стыке психологии, соционики, профайлинга и практик глубинных изменений через гипнотерапию.</p>
+              <p>Мой подход — выявление скрытых механизмов мышления и поведения, которые влияют на жизнь, деньги и отношения.</p>
+            </div>
+
+            <div className="expert-requests">
+              <p className="requests-title">Помогаю:</p>
+              <ul>
+                <li>выйти из повторяющихся жизненных сценариев</li>
+                <li>восстановить внутреннюю опору и ясность мышления</li>
+                <li>разобраться в сложных отношениях и динамике конфликтов</li>
+                <li>повысить уровень уверенности и влияния</li>
+                <li>перейти от хаотичных действий к системному результату</li>
+              </ul>
+            </div>
+
+            <div className="expert-contact">
+              <p className="contact-note">Запись через Анну Милованову</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const CtaSection = () => {
   return (
     <section className="section final-section" id="cta">
@@ -559,7 +639,7 @@ const CtaSection = () => {
 
         <div className="cta-buttons">
           <a href="#" className="primary-button">
-            💳 Оплатить и получить доступ
+            💳 Оплатить 
           </a>
         </div>
 
@@ -583,6 +663,7 @@ function App() {
       <QuoteSection />
       <ReviewsSection />
       <FAQSection />
+      <ExpertsSection />
       <CtaSection />
     </main>
   );
