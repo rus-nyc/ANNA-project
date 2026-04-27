@@ -533,7 +533,7 @@ const FAQSection = () => {
   );
 };
 
-// НОВАЯ СЕКЦИЯ: ЭКСПЕРТЫ
+// СЕКЦИЯ: ЭКСПЕРТЫ
 const ExpertsSection = () => {
   return (
     <section className="section experts-section" id="experts">
@@ -606,7 +606,9 @@ const ExpertsSection = () => {
             </div>
 
             <div className="expert-contact">
-              <p className="contact-note">Запись через Анну Милованову</p>
+              <a href="https://t.me/psystan" className="expert-button" target="_blank" rel="noopener noreferrer">
+                📱 Написать Стану в Telegram
+              </a>
             </div>
           </div>
         </div>
