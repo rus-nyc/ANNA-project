@@ -29,9 +29,6 @@ const Header = () => {
           <button onClick={() => scrollToSection("faq")} className="nav-link">
             FAQ
           </button>
-          <button onClick={() => scrollToSection("experts")} className="nav-link">
-            Эксперты
-          </button>
           <button onClick={() => scrollToSection("cta")} className="header-button">
             Получить доступ
           </button>
@@ -533,17 +530,17 @@ const FAQSection = () => {
   );
 };
 
-// СЕКЦИЯ: ЭКСПЕРТЫ
+
 const ExpertsSection = () => {
   return (
     <section className="section experts-section" id="experts">
       <div className="container">
         <div className="section-header center">
           <span className="section-label">Кто ведёт</span>
-          <h2>Ваши эксперты</h2>
+          <h2>Ваш эксперт</h2>
         </div>
 
-        <div className="experts-grid">
+        <div className="experts-grid" style={{ gridTemplateColumns: 'minmax(380px, 500px)', justifyContent: 'center' }}>
           {/* Анна Милованова */}
           <div className="expert-card">
             <div className="expert-photo">
@@ -575,39 +572,6 @@ const ExpertsSection = () => {
             <div className="expert-contacts">
               <a href="https://forms.gle/SArV4HVsGhmTFc4S7" className="expert-button" target="_blank" rel="noopener noreferrer">
                 📝 Записаться на диагностику
-              </a>
-            </div>
-          </div>
-
-          {/* Стан (Alexander Stan) */}
-          <div className="expert-card">
-            <div className="expert-photo expert-photo-placeholder">
-              <div className="photo-placeholder">📷</div>
-            </div>
-            <h3>Стан (Alexander Stan)</h3>
-            <p className="expert-title">Эксперт по психологии поведения и глубинной трансформации</p>
-            
-            <div className="expert-divider"></div>
-            
-            <div className="expert-approach">
-              <p>Работаю на стыке психологии, соционики, профайлинга и практик глубинных изменений через гипнотерапию.</p>
-              <p>Мой подход — выявление скрытых механизмов мышления и поведения, которые влияют на жизнь, деньги и отношения.</p>
-            </div>
-
-            <div className="expert-requests">
-              <p className="requests-title">Помогаю:</p>
-              <ul>
-                <li>выйти из повторяющихся жизненных сценариев</li>
-                <li>восстановить внутреннюю опору и ясность мышления</li>
-                <li>разобраться в сложных отношениях и динамике конфликтов</li>
-                <li>повысить уровень уверенности и влияния</li>
-                <li>перейти от хаотичных действий к системному результату</li>
-              </ul>
-            </div>
-
-            <div className="expert-contact">
-              <a href="https://t.me/psystan" className="expert-button" target="_blank" rel="noopener noreferrer">
-                📱 Написать Стану в Telegram
               </a>
             </div>
           </div>
