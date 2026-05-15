@@ -599,15 +599,24 @@ const CtaSection = () => {
         </p>
 
         <div className="cta-price">
-          <span className="price-old">$29</span>
-          <span className="price-current">$9</span>
+          <span className="price-old">€29</span>
+          <span className="price-current">€9</span>
         </div>
 
         <div className="cta-buttons">
-          <a href="#" className="primary-button">
-            💳 Оплатить 
-          </a>
-        </div>
+         <a href="https://buy.stripe.com/8x2eVddligYA4Gi8tEfUQ00"
+         className="primary-button"
+         target="_blank"
+         rel="noopener noreferrer">
+  💳 Оплатить картой
+</a>
+       <a href="ANNA_PERSONAL_TELEGRAM_HERE"
+          className="secondary-button"
+          target="_blank"
+          rel="noopener noreferrer">
+  🇷🇺 Оплата из РФ 
+</a>
+     </div>
 
         <p className="cta-note">Доступ открывается сразу после оплаты</p>
       </div>
@@ -631,13 +640,13 @@ const ThankYouPage = () => {
           </p>
 
           <a
-            href="TELEGRAM_LINK_HERE"
-            className="primary-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-           Перейти в Telegram.
-          </a>
+  href="https://t.me/+_4bLkT4QcXkwMTYy"
+  className="telegram-button"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Перейти в Telegram
+</a>
         </div>
       </section>
     </main>
