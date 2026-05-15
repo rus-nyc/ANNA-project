@@ -615,7 +615,42 @@ const CtaSection = () => {
   );
 };
 
+const ThankYouPage = () => {
+  return (
+    <main className="thank-you-page">
+      <section className="section final-section">
+        <div className="container narrow final-block">
+          <h1>Спасибо за покупку!</h1>
+
+          <p className="section-text">
+           Оплата прошла успешно.
+          </p>
+
+          <p className="section-text">
+            Нажмите на кнопку ниже, чтобы перейти в Telegram-канал.
+          </p>
+
+          <a
+            href="TELEGRAM_LINK_HERE"
+            className="primary-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Перейти в Telegram.
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+};
+
 function App() {
+  const isThankYouPage = window.location.pathname === "/thank-you";
+
+  if (isThankYouPage) {
+    return <ThankYouPage />;
+  }
+
   return (
     <main>
       <Header />
