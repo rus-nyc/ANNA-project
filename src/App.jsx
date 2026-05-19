@@ -610,7 +610,7 @@ const CtaSection = () => {
          rel="noopener noreferrer">
   💳 Оплатить картой
 </a>
-       <a href="ANNA_PERSONAL_TELEGRAM_HERE"
+       <a href="https://t.me/pult_hyperfocus_bot?start=oplata"
           className="secondary-button"
           target="_blank"
           rel="noopener noreferrer">
