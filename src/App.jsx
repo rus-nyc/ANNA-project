@@ -571,7 +571,7 @@ const ExpertsSection = () => {
 
             <div className="expert-contacts">
               <a href="https://forms.gle/SArV4HVsGhmTFc4S7" className="expert-button" target="_blank" rel="noopener noreferrer">
-                📝 Записаться на диагностику
+                📝 Записаться на ознакомительную встречу
               </a>
             </div>
           </div>
